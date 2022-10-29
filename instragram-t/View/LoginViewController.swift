@@ -6,24 +6,54 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        txtPassword.isSecureTextEntry = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func OnTapLogin(_ sender: UIButton) {
+        if txtEmail.text == "" || txtPassword.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Completa los campos", preferredStyle: .alert)
+            let alertButton = UIAlertAction(title: "ok", style: .default)
+            alert.addAction(alertButton)
+            present(alert, animated: true)
+        }
+        
+        signIn(email: txtEmail.text!, password: txtPassword.text!)
     }
-    */
-
+    
+    
+    func signIn(email: String, password: String ) {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if error == nil {
+                
+            } else {
+                self.signUp(email: email, password: password)
+            }
+        }
+    }
+    
+    func signUp(email: String, password: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+        
+            if error != nil {
+                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let alertButton = UIAlertAction(title: "ok", style: .default)
+                alert.addAction(alertButton)
+                self.present(alert, animated: true)
+            }
+        }
+    }
+    
+    
 }
