@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6BAEDA2911CC9E0057E730 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BAED92911CC9E0057E730 /* Option.swift */; };
+		3B6BAEDC2911E1070057E730 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BAEDB2911E1070057E730 /* ProfileViewController.swift */; };
 		3B877005290D870E0080768B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B877004290D870E0080768B /* LoginViewController.swift */; };
 		3B877007290D8A7C0080768B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B877006290D8A7C0080768B /* GoogleService-Info.plist */; };
 		3B87700A290D8BBB0080768B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B877009290D8BBB0080768B /* FirebaseAuth */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B6BAED92911CC9E0057E730 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		3B6BAEDB2911E1070057E730 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3B877004290D870E0080768B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B877006290D8A7C0080768B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F09FF46528FE2160006A9B78 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				F0E067B228F9FBCF0091034E /* ViewController.swift */,
 				F09FF46728FE24AD006A9B78 /* SettingsViewController.swift */,
 				3B877004290D870E0080768B /* LoginViewController.swift */,
+				3B6BAEDB2911E1070057E730 /* ProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			children = (
 				F0E067AE28F9FBCF0091034E /* AppDelegate.swift */,
 				F0E067B028F9FBCF0091034E /* SceneDelegate.swift */,
+				3B6BAED92911CC9E0057E730 /* Option.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +227,8 @@
 				F0E067AF28F9FBCF0091034E /* AppDelegate.swift in Sources */,
 				F0E067B128F9FBCF0091034E /* SceneDelegate.swift in Sources */,
 				3B877005290D870E0080768B /* LoginViewController.swift in Sources */,
+				3B6BAEDC2911E1070057E730 /* ProfileViewController.swift in Sources */,
+				3B6BAEDA2911CC9E0057E730 /* Option.swift in Sources */,
 				F09FF46828FE24AD006A9B78 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
